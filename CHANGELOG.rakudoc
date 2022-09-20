@@ -1,0 +1,64 @@
+=begin pod
+=TITLE Changlog
+=SUBTITLE For RakuConfig
+
+=head1 2021-01-24
+=item Add Changelog
+=item Add test for no config.raku file
+=item re-order tests, put author and extensive tests in xt/
+=item add :cache = True option, so that if :!cache, then the previous value of config is not used
+
+=head1 2021-01-27
+=item added test for empty strings in config files, no need to change code
+=item removed :cache and replaced with :no-cache which is False by default
+
+=head1 2021-02-08
+=item removed write-config, so as to reduce dependency on PrettyDump.
+=item remove 'Test::META', 'Test::Deeply::Relaxed', 'File::Directory::Tree' from Test depends.
+
+=head1 v0.3.1 2022-07-08
+=item bump version
+=item change auth to zef, prepare for fez
+=item change to githhub actions
+
+=head1 v0.4.0 2022-07-08
+=item change version to 3 part, bump
+
+=head1 v0.5.0 2022-08-19
+=item removed all mention of :no-cache. It is an unnecessary optimisation. Config files are not large.
+=item comment out proto for write-config. This removes all reference to write-config.
+=item rename xt/01
+=item rewrote test files & README to eliminated :no-cache
+=item renamed all files to raku* extensions
+
+=head1 v0.6.0 2022-09-02
+=item added write-config & format-config with minimal pretty formatting.
+
+=head1 v0.6.1 2022-09-03
+=item remove redundant no-precompilation
+
+=head1 v0.7.0 2022-09-11
+=item increased default behaviour so that one of or both of following are tried
+=item2 config.raku in CWD
+=item2 configs/ directory
+=item2 if both, then the keys are merged and tested against @required
+=item added get-config( Str )
+=item2 where the Str is a directory
+=item if not given CWD is default.
+=item rewrite README
+=item fix CHANGELOG
+=item fix tests with cleanup
+
+=head1 v0.7.1 2022-09-13
+=item fix bad return type with embedded Hash
+
+=head1 v0.7.2 2022-09-16
+=item change formatting of multiline Str.
+=item make Num into Numeric to capture more generic numbers
+
+=head1 v0.7.3 2022-09-19
+=item add tests for mode form of RakuConfig
+=item improve Exception message for non-directory mode
+=item fix error in mode
+
+=end pod

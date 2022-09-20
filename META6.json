@@ -1,7 +1,7 @@
 {
   "name": "RakuConfig",
   "description": "Get config files that are Raku structures",
-  "version": "0.4.0",
+  "version": "0.7.3",
   "perl": "6.d",
   "authors": [
     "Richard Hainsworth"
@@ -11,7 +11,7 @@
   "build-depends": [],
   "test-depends": [],
   "provides": {
-    "RakuConfig": "lib/RakuConfig.pm6"
+    "RakuConfig": "lib/RakuConfig.rakumod"
   },
   "resources": [],
   "support": {
